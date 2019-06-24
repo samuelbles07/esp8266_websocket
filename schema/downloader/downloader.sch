@@ -1,0 +1,183 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:ESP8266
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L CONN_01X04 P
+U 1 1 593D0745
+P 4350 3650
+F 0 "P" H 4350 3900 50  0000 C CNN
+F 1 "CONN_01X04" V 4450 3650 50  0000 C CNN
+F 2 "" H 4350 3650 50  0000 C CNN
+F 3 "" H 4350 3650 50  0000 C CNN
+	1    4350 3650
+	-1   0    0    1   
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 593D08F0
+P 4550 3900
+F 0 "#PWR?" H 4550 3750 50  0001 C CNN
+F 1 "+3.3V" H 4550 4040 50  0000 C CNN
+F 2 "" H 4550 3900 50  0000 C CNN
+F 3 "" H 4550 3900 50  0000 C CNN
+	1    4550 3900
+	-1   0    0    1   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 593D0909
+P 4550 3400
+F 0 "#PWR?" H 4550 3150 50  0001 C CNN
+F 1 "GND" H 4550 3250 50  0000 C CNN
+F 2 "" H 4550 3400 50  0000 C CNN
+F 3 "" H 4550 3400 50  0000 C CNN
+	1    4550 3400
+	-1   0    0    1   
+$EndComp
+Text Notes 4600 3750 0    60   ~ 0
+RX
+Text Notes 4600 3650 0    60   ~ 0
+TX
+$Comp
+L ESP-01v090 U?
+U 1 1 593D09AD
+P 6200 3650
+F 0 "U?" H 6200 3550 50  0000 C CNN
+F 1 "ESP-01v090" H 6200 3750 50  0000 C CNN
+F 2 "" H 6200 3650 50  0001 C CNN
+F 3 "" H 6200 3650 50  0001 C CNN
+	1    6200 3650
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	4550 3500 4550 3400
+Wire Wire Line
+	4550 3900 4550 3800
+Wire Wire Line
+	6350 4750 6350 4600
+Wire Wire Line
+	6150 4600 6150 4750
+Wire Wire Line
+	4850 4750 4850 3800
+Wire Wire Line
+	4850 3800 4550 3800
+Wire Wire Line
+	6050 2700 4700 2700
+Wire Wire Line
+	4700 2700 4700 3500
+Wire Wire Line
+	4700 3500 4550 3500
+Wire Wire Line
+	4550 3700 5000 3700
+Wire Wire Line
+	5000 3700 5000 4600
+Wire Wire Line
+	5000 4600 6050 4600
+Wire Wire Line
+	4850 3600 4550 3600
+Wire Wire Line
+	4850 2450 4850 3600
+Wire Wire Line
+	6350 2450 6350 2700
+Wire Wire Line
+	4850 4750 6350 4750
+Connection ~ 6150 4750
+$Comp
+L SW_PUSH SW1
+U 1 1 593D0B75
+P 5600 3700
+F 0 "SW1" H 5750 3810 50  0000 C CNN
+F 1 "Reset" H 5600 3620 50  0000 C CNN
+F 2 "" H 5600 3700 50  0000 C CNN
+F 3 "" H 5600 3700 50  0000 C CNN
+	1    5600 3700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L R R1
+U 1 1 593D0C4E
+P 5600 4350
+F 0 "R1" V 5680 4350 50  0000 C CNN
+F 1 "10k" V 5600 4350 50  0000 C CNN
+F 2 "" V 5530 4350 50  0000 C CNN
+F 3 "" H 5600 4350 50  0000 C CNN
+	1    5600 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 4200 5600 4000
+Wire Wire Line
+	6250 4600 6250 4650
+Wire Wire Line
+	6250 4650 5750 4650
+Wire Wire Line
+	5750 4650 5750 4100
+Wire Wire Line
+	5750 4100 5600 4100
+Connection ~ 5600 4100
+Wire Wire Line
+	5600 4500 5600 4750
+Connection ~ 5600 4750
+Connection ~ 5600 2700
+Wire Wire Line
+	6250 2700 6250 2600
+Wire Wire Line
+	6350 2450 4850 2450
+Wire Wire Line
+	5600 2600 5600 3400
+$Comp
+L SW_PUSH SW2
+U 1 1 593D0F2C
+P 5950 2600
+F 0 "SW2" H 6100 2710 50  0000 C CNN
+F 1 "Mode" H 5950 2520 50  0000 C CNN
+F 2 "" H 5950 2600 50  0000 C CNN
+F 3 "" H 5950 2600 50  0000 C CNN
+	1    5950 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5650 2600 5600 2600
+$EndSCHEMATC

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Dashboard</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <script src="socket.js"></script>
+</head>
+
+<body>
+    <p>
+        <h1 align="center">LED CONTROL PANEL</h1>
+    </p>
+    <div class="card">
+        <div class="container">
+            <div align="center">
+                <span><h3>LED BLINKING</h3></span>
+                </br>
+                <input id="blinkIn" type="number" min="100" max="10000" style="padding: 2% 2%; line-height: 10%; font-size: 200%; width:30%; margin-right: 5%;"> <button id="blinkSub" style="padding: 5% 2%; line-height: 10%; font-size: 150%; width:30%;">Submit</button>
+                </br>
+                </br>
+            </div>
+            Return: <span id="blinkRet"></span>
+        </div>
+    </div>
+    <div class="card">
+        <div class="container">
+            <h3 align="center">LED DIMMER</h3>
+            <b id="dimVal">50</b>
+            <div align="center">
+                <span align="center">0</span> <input id="dimRan" type="range" name="points" id="slideA" value="50" min="0" max="100" style="width:80%;"> <span>100</span>
+                <!--<button type="button" id="dimSw">Hidupkan!</button> <span style="padding-right: 10%">100</span>-->
+                </br>
+                </br>
+            </div>
+            Return: <span id="dimRet"></span>
+        </div>
+    </div>
+    <div class="card">
+        <div class="container">
+            <h3 align="center">RGB LED</h3>
+            <div style="margin-left: 10%;">
+                R: <input id="rgbRanR" type="range" name="points" id="slideA" value="50" min="0" max="248" style="width:50%; margin-right: 3%;"> <b id="rgbR">32</b></br>
+                G: <input id="rgbRanG" type="range" name="points" id="slideA" value="50" min="0" max="255" style="width:50%; margin-right: 3%;"> <b id="rgbG" style="margin-right: 6%;">32</b> <input id="rgbCol" value="#323232" type="color" style="width:20%;"></br>
+                B: <input id="rgbRanB" type="range" name="points" id="slideA" value="50" min="0" max="255" style="width:50%; margin-right: 3%;"> <b id="rgbB">32</b>
+            </div>
+            </br>
+            Return: <span id="rgbRet"></span>
+        </div>
+    </div>
+
+
+</body>
+<script src="script.js"></script>
+
+</html>
